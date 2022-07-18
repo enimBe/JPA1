@@ -27,7 +27,9 @@ public class OrderRepository {
         return em.find(Order.class, id);
     }
 
-    //JPQL쿼리를 문자로 생성하기는 번거롭고, 버그 발생 가능 (권장X)
+    /**
+     * JPQL쿼리를 문자로 생성하기는 번거롭고, 버그 발생 가능 (권장X)
+     */
     public List<Order> findAllByString(OrderSearch orderSearch) {
 
         //language = JPAQL
